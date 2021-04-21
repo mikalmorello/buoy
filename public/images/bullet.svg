@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Header</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Buoy" transform="translate(-916.000000, -84.000000)" fill="#465351" fill-rule="nonzero" stroke="#1E2121" stroke-width="3">
+            <g id="Header" transform="translate(916.000000, 83.500000)">
+                <g id="buoy" transform="translate(9.904574, 10.246176) rotate(-9.000000) translate(-9.904574, -10.246176) translate(1.904574, 1.746176)">
+                    <path d="M7.98962836,0.833100999 C3.58245939,0.833100999 0.120026324,4.29590296 0.120026324,8.70270303 C0.120026324,13.1095031 3.58282829,16.5723051 7.98962836,16.5723051 C12.3967973,16.5723051 15.8592304,13.1095031 15.8592304,8.70270303 C15.8592304,4.29590296 12.3964284,0.833100999 7.98962836,0.833100999 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

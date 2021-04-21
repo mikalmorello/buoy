@@ -61,6 +61,10 @@ body {
   background: #5baaa2;
   flex-grow: 1;
 }
+.buoy__section-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
 .buoy__container {
   display: flex;
   flex-direction: column;
@@ -71,12 +75,23 @@ body {
     width: 50rem;
   }
 }
-.buoy__section-title {
-  font-size: 1.5rem;
-}
 .buoy__list {
-  margin: 0;
+  list-style-image: url(/images/bullet.svg);
+  margin: 0 0 0 2rem;
   padding: 0;
+}
+.buoy__list-item::marker {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+code {
+  border-radius: 5px;
+  border: 1px solid #bcbec0;
+  background: #465351;
+  color: white;
+  padding: 1rem;
+  font: 0.8rem Monaco, Consolas, "Andale  Mono", "DejaVu Sans Mono", monospace;
 }
 
 /*# sourceMappingURL=buoy.css.map */

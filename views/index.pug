@@ -12,11 +12,32 @@ block content
   main.buoy__main
     section.buoy__section
       div.buoy__container 
-        h3.buoy__section-title Section 1
+        h3.buoy__section-title Logging into DO
+        p login
         ul.buoy__list
-          li list item
+          li.buoy__list-item list item
     section.buoy__section
       div.buoy__container 
-        h3.buoy__section-title Section 2
+        h3.buoy__section-title Troubleshooting DO
+        p App working locally, but not working on DO?  Have you:
         ul.buoy__list
-          li list item
+          li.buoy__list-item 
+            h4 Whitelisted your port number?
+            p Replace "3000" with your port number in the following example
+            code sudo ufw allow 3000
+          li.buoy__list-item 
+            h4 Added environment variables?
+          li.buoy__list-item 
+            h4 Killed existing processes?
+            p Determine which Node processes that are running
+            code ps aux | grep node 
+            p Kill the node process you would like to stop, replacing "1234" with the actual node process
+            code kill 1234
+          li.buoy__list-item 
+            h4 Installed your npm dependencies?
+          li.buoy__list-item 
+            h4 Start new processes?
+          li.buoy__list-item 
+            h4 Pulled the latest repo changes into DO from Github?
+          li.buoy__list-item 
+            h4 Restarted your application?
