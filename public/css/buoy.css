@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  width: 100%;
+}
+
+.buoy {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+.buoy__header {
+  align-items: center;
+  background-image: url(/images/wave-large.svg);
+  background-position-y: 5rem;
+  background-repeat: repeat-x;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  min-width: 100vw;
+  text-align: center;
+}
+.buoy__intro {
+  background: #83c5be;
+  width: 100%;
+}
+.buoy__title {
+  font-size: 5rem;
+  margin: 2rem 0 0 0;
+}
+.buoy__subtitle {
+  font-size: 1.875rem;
+  margin: 1rem 0 3.5rem;
+}
+.buoy__subtitle span {
+  font-size: 0.6em;
+}
+.buoy__main {
+  background: #83c5be;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 100vw;
+}
+.buoy__section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+.buoy__section:nth-child(1) {
+  background: #70b6af;
+}
+.buoy__section:nth-child(2) {
+  background: #5baaa2;
+  flex-grow: 1;
+}
+.buoy__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 60rem) {
+  .buoy__container {
+    width: 50rem;
+  }
+}
+.buoy__section-title {
+  font-size: 1.5rem;
+}
+.buoy__list {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=buoy.css.map */
