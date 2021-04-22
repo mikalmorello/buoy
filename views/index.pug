@@ -22,22 +22,29 @@ block content
         p App working locally, but not working on DO?  Have you:
         ul.buoy__list
           li.buoy__list-item 
-            h4 Whitelisted your port number?
-            p Replace "3000" with your port number in the following example
-            code sudo ufw allow 3000
+            h4.buoy__list-item-title Whitelisted your port number?
+            p.buoy__list-item-description Replace [insert port number] with your port number (ex. 3000):
+            code sudo ufw allow [insert port number]
           li.buoy__list-item 
-            h4 Added environment variables?
+            h4.buoy__list-item-title Added environment variables?
+            p.buoy__list-item-description If your application requires local environment variables not available within your repo, you may need to add environment variables on DO.
           li.buoy__list-item 
-            h4 Killed existing processes?
-            p Determine which Node processes that are running
+            h4.buoy__list-item-title Killed existing processes?
+            p.buoy__list-item-description Determine which Node processes that are running
             code ps aux | grep node 
-            p Kill the node process you would like to stop, replacing "1234" with the actual node process
-            code kill 1234
+            p.buoy__list-item-description Kill the node process you would like to stop, replacing "1234" with the actual node process
+            code kill [insert process number]
           li.buoy__list-item 
-            h4 Installed your npm dependencies?
+            h4.buoy__list-item-title Installed your npm dependencies?
+            p.buoy__list-item-description Kill the node process you would like to stop, replacing "1234" with the actual node process
+            code npm install
           li.buoy__list-item 
-            h4 Start new processes?
+            h4.buoy__list-item-title Start new processes?
           li.buoy__list-item 
-            h4 Pulled the latest repo changes into DO from Github?
+            h4.buoy__list-item-title Pulled the latest repo changesfrom Github?
+            p.buoy__list-item-description To pull your latest Github changes:
+            code git pull origin [insert repo-name]
           li.buoy__list-item 
-            h4 Restarted your application?
+            h4.buoy__list-item-title Restarted your application?
+            p.buoy__list-item-description To reboot your droplet from the command line, run:
+            code sudo shutdown -r now
