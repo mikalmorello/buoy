@@ -13,25 +13,20 @@ block content
     section.buoy__section
       div.buoy__container 
         h3.buoy__section-title Accessing DO 
-        p General tips for accessing DO
         ul.buoy__list
           li.buoy__list-item 
             h4.buoy__list-item-title Logging into DO via console
             p.buoy__list-item-description Login to DO using the ip address provided by your droplet: 
             code ssh root@[insert ip-address]
-          li.buoy__list-item 
-            h4.buoy__list-item-title Adding a new SSH key to an existing Droplet
-            p.buoy__list-item-description x
-            code x
     section.buoy__section
       div.buoy__container 
         h3.buoy__section-title Troubleshooting DO
         p App working locally, but not working on DO?  Have you:
         ul.buoy__list
           li.buoy__list-item 
-            h4.buoy__list-item-title Whitelisted your port number?
-            p.buoy__list-item-description Replace [insert port number] with your port number (ex. 3000):
-            code sudo ufw allow [insert port-number]
+            h4.buoy__list-item-title Installed your npm dependencies?
+            p.buoy__list-item-description Install dependencies from the project root using:
+            code npm install
           li.buoy__list-item 
             h4.buoy__list-item-title Added environment variables?
             p.buoy__list-item-description If your application requires local environment variables not available within your repo, you may need to add environment variables on DO.
@@ -40,15 +35,15 @@ block content
             p.buoy__list-item-description Edit the newly created .env file, adding required env variables (project root directory)
             code vi local.env
           li.buoy__list-item 
+            h4.buoy__list-item-title Pulled the latest repo changesfrom Github?
+            p.buoy__list-item-description To pull your latest Github changes:
+            code git pull origin [insert repo-name]
+          li.buoy__list-item 
             h4.buoy__list-item-title Killed existing processes?
             p.buoy__list-item-description Determine which Node processes that are running:
             code ps aux | grep node 
             p.buoy__list-item-description Kill the node process you would like to stop, replacing [insert process-number] with the actual node process number:
             code kill [insert process-number]
-          li.buoy__list-item 
-            h4.buoy__list-item-title Installed your npm dependencies?
-            p.buoy__list-item-description Install dependencies from the project root using:
-            code npm install
           li.buoy__list-item 
             h4.buoy__list-item-title Tried rerunning the process?
             p.buoy__list-item-description To try running the process indefinitally, run:
@@ -56,13 +51,25 @@ block content
             p.buoy__list-item-description To try running the process once, run:
             code node [insert process-name]
           li.buoy__list-item 
-            h4.buoy__list-item-title Pulled the latest repo changesfrom Github?
-            p.buoy__list-item-description To pull your latest Github changes:
-            code git pull origin [insert repo-name]
+            h4.buoy__list-item-title Port number already in use error (Error: listen EADDRINUSE)? 
+            p.buoy__list-item-description You need a unique port number of each process. Either change the port number you are using, or stop an existing process on the port numnber:
+            code x         
+          li.buoy__list-item 
+            h4.buoy__list-item-title Whitelisted your new port number? 
+            p.buoy__list-item-description Replace [insert port number] with your port number (ex. 8080):
+            code sudo ufw allow [insert port-number]
+          li.buoy__list-item 
+            h4.buoy__list-item-title Had an issue using port 3000?
+            p.buoy__list-item-description You must overwrite DO's default use of that port #:
+            code x
           li.buoy__list-item 
             h4.buoy__list-item-title Restarted your application?
             p.buoy__list-item-description To reboot your droplet from the command line, run:
-            code sudo shutdown -r now
+            code sudo shutdown -r now 
+          li.buoy__list-item 
+            h4.buoy__list-item-title Added your IP to MongoDB?
+            p.buoy__list-item-description Make sure your IP address is whitelisted under 
+              a(href="https://docs.atlas.mongodb.com/security/ip-access-list/") Network Access for your database.
     section.buoy__section
       div.buoy__container 
         h3.buoy__section-title Still not working?
