@@ -37,6 +37,12 @@ h1, h2, h3, h4, h5, h6 {
     background: #83c5be;
     width: 100%;
   }
+  &__logo {
+    transition: transform .7s ease-in-out;
+    &:hover{
+      transform: rotate(30deg);
+    }
+  }
   &__title {
     font-size: 5rem;
     margin: 2rem 0 3rem 0;
@@ -68,6 +74,16 @@ h1, h2, h3, h4, h5, h6 {
       background: #5baaa2;
       flex-grow: 1;
     }
+    &:nth-child(3) {
+      background: #499189;
+      background-image: url(/images/seaweed.svg);
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-size: 11rem;
+      padding-right: 7rem;
+      padding-top: 4rem; 
+
+    }
   }
   &__section-title {
     font-size: 2rem;
@@ -93,11 +109,14 @@ h1, h2, h3, h4, h5, h6 {
   &__list-item {
     background-image: url(/images/wave-border.svg);
     background-repeat: repeat-x;
-    margin-top: 3rem;
-    padding-top: 1.5rem;
+    margin-top: 4rem;
+    padding-top: 2.5rem;
     &::marker {
       display: inline-block;
       vertical-align: middle;
+    }
+    &:first-child {
+      margin-top: 1rem;
     }
   }
   &__list-item-description {

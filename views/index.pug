@@ -3,7 +3,7 @@ extends layout
 block content
 
   header.buoy__header
-    img(src="/images/buoy.svg" alt="Simple tilted buoy illustration")
+    img.buoy__logo(src="/images/buoy.svg" alt="Simple tilted buoy illustration")
     div.buoy__intro
       h1.buoy__title Buoy
       h2.buoy__subtitle A 
@@ -12,10 +12,17 @@ block content
   main.buoy__main
     section.buoy__section
       div.buoy__container 
-        h3.buoy__section-title Logging into DO
-        p login
+        h3.buoy__section-title Accessing DO 
+        p General tips for accessing DO
         ul.buoy__list
-          li.buoy__list-item list item
+          li.buoy__list-item 
+            h4.buoy__list-item-title Logging into DO via console
+            p.buoy__list-item-description Login to DO using the ip address provided by your droplet: 
+            code ssh root@[insert ip-address]
+          li.buoy__list-item 
+            h4.buoy__list-item-title Adding a new SSH key to an existing Droplet
+            p.buoy__list-item-description x
+            code x
     section.buoy__section
       div.buoy__container 
         h3.buoy__section-title Troubleshooting DO
@@ -24,22 +31,30 @@ block content
           li.buoy__list-item 
             h4.buoy__list-item-title Whitelisted your port number?
             p.buoy__list-item-description Replace [insert port number] with your port number (ex. 3000):
-            code sudo ufw allow [insert port number]
+            code sudo ufw allow [insert port-number]
           li.buoy__list-item 
             h4.buoy__list-item-title Added environment variables?
             p.buoy__list-item-description If your application requires local environment variables not available within your repo, you may need to add environment variables on DO.
+            p.buoy__list-item-description Create a new env file (project root directory)
+            code touch local.env
+            p.buoy__list-item-description Edit the newly created .env file, adding required env variables (project root directory)
+            code vi local.env
           li.buoy__list-item 
             h4.buoy__list-item-title Killed existing processes?
-            p.buoy__list-item-description Determine which Node processes that are running
+            p.buoy__list-item-description Determine which Node processes that are running:
             code ps aux | grep node 
-            p.buoy__list-item-description Kill the node process you would like to stop, replacing "1234" with the actual node process
-            code kill [insert process number]
+            p.buoy__list-item-description Kill the node process you would like to stop, replacing [insert process-number] with the actual node process number:
+            code kill [insert process-number]
           li.buoy__list-item 
             h4.buoy__list-item-title Installed your npm dependencies?
-            p.buoy__list-item-description Kill the node process you would like to stop, replacing "1234" with the actual node process
+            p.buoy__list-item-description Install dependencies from the project root using:
             code npm install
           li.buoy__list-item 
-            h4.buoy__list-item-title Start new processes?
+            h4.buoy__list-item-title Tried rerunning the process?
+            p.buoy__list-item-description To try running the process indefinitally, run:
+            code nohup node [insert process-name] &
+            p.buoy__list-item-description To try running the process once, run:
+            code node [insert process-name]
           li.buoy__list-item 
             h4.buoy__list-item-title Pulled the latest repo changesfrom Github?
             p.buoy__list-item-description To pull your latest Github changes:
@@ -48,3 +63,10 @@ block content
             h4.buoy__list-item-title Restarted your application?
             p.buoy__list-item-description To reboot your droplet from the command line, run:
             code sudo shutdown -r now
+    section.buoy__section
+      div.buoy__container 
+        h3.buoy__section-title Still not working?
+        p Access 
+          a(href="https://www.digitalocean.com/support/") DO help docs 
+          | or 
+          a(href="https://canvas.harvard.edu/") reach out to teaching staff on Canvas (Piazza)

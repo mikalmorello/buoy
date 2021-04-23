@@ -36,6 +36,12 @@ h1, h2, h3, h4, h5, h6 {
   background: #83c5be;
   width: 100%;
 }
+.buoy__logo {
+  transition: transform 0.7s ease-in-out;
+}
+.buoy__logo:hover {
+  transform: rotate(30deg);
+}
 .buoy__title {
   font-size: 5rem;
   margin: 2rem 0 3rem 0;
@@ -68,6 +74,15 @@ h1, h2, h3, h4, h5, h6 {
   background: #5baaa2;
   flex-grow: 1;
 }
+.buoy__section:nth-child(3) {
+  background: #499189;
+  background-image: url(/images/seaweed.svg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 11rem;
+  padding-right: 7rem;
+  padding-top: 4rem;
+}
 .buoy__section-title {
   font-size: 2rem;
   margin: 0;
@@ -94,12 +109,15 @@ h1, h2, h3, h4, h5, h6 {
 .buoy__list-item {
   background-image: url(/images/wave-border.svg);
   background-repeat: repeat-x;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
 }
 .buoy__list-item::marker {
   display: inline-block;
   vertical-align: middle;
+}
+.buoy__list-item:first-child {
+  margin-top: 1rem;
 }
 .buoy__list-item-description {
   margin-top: 0.5rem;
